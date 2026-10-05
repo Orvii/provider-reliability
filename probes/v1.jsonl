@@ -1,0 +1,8 @@
+{"id": "json-out-short", "class": "structured-output", "len_band": "short", "prompt": "Return exactly one JSON object with keys name (string) and primes (array of the first 5 primes). No prose.", "expect": "json-object"}
+{"id": "toolcall-shape", "class": "tool-call", "len_band": "short", "prompt": "You have a tool get_time(city). Call it once for Lisbon and reply with the tool result summarized in one sentence.", "expect": "tool-call-then-text"}
+{"id": "long-context-recall", "class": "recall", "len_band": "long", "prompt": "CONTEXT: The archive code for the Meridian shipment is 7741-K. Several other codes appear below as decoys: 1120-A, 9034-Z, 5518-Q. QUESTION: Reply with only the Meridian archive code.", "expect": "exact-string"}
+{"id": "unicode-fidelity", "class": "fidelity", "len_band": "short", "prompt": "Repeat this string exactly, preserving every character: İstanbul'da yağmur — 東京の雨 — 🌧️ naïve façade.", "expect": "exact-string"}
+{"id": "whitespace-sensitive", "class": "fidelity", "len_band": "short", "prompt": "Output a markdown table with exactly two rows and columns id,value where value keeps leading zeros: 007 and 042. No extra text.", "expect": "markdown-table"}
+{"id": "truncation-prone", "class": "truncation", "len_band": "long-out", "prompt": "List integers from 1 to 400, comma-separated, nothing else.", "expect": "complete-sequence"}
+{"id": "stream-stall-canary", "class": "stall", "len_band": "medium-out", "prompt": "Write a 300-word summary of why lighthouses were built tall, in flowing prose.", "expect": "stream-complete"}
+{"id": "code-out-deterministic", "class": "code", "len_band": "medium", "prompt": "Write a Python function median(xs) returning the median of a non-empty list of floats. Code only.", "expect": "code-block"}
