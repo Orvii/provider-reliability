@@ -27,6 +27,14 @@ A reliability dataset that leaks its sources is not research; it is a breach wit
 | [sanitization-boundary](notes/sanitization-boundary.md) | what survives aggregation, decided before collection starts |
 | [probe-set-design](notes/probe-set-design.md) | the mid-series probe swap that looks like a provider regression |
 
+## Worked example (synthetic)
+
+[examples/synthetic/](examples/synthetic/) contains a hand-written event log and `analyze.py`, which computes every statistic the notes promise — error mix, ttft/gap percentiles, stall rate and position, semantic-failure count, retry-added traffic, incident slices, opaque-alias flags. It is synthetic on purpose: the point is that the **schema suffices**, and that the analyzer is reviewable line by line. Run it:
+
+```bash
+python3 examples/synthetic/analyze.py examples/synthetic/events.jsonl
+```
+
 ## Harness design (the artifact)
 
 The reference harness is deliberately small and described in [harness-design.md](harness-design.md): one request shape, N providers behind identical adapters, every attempt recorded as a structured event (attempt, provider, alias, model-id-resolved, status class, ttft, inter-token gaps, finish reason, retry depth). Everything above is computable from that event log — which is exactly why the log schema is the deliverable, not a dashboard.
