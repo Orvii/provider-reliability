@@ -25,6 +25,7 @@ A reliability dataset that leaks its sources is not research; it is a breach wit
 | [retry-storms](notes/retry-storms.md) | measuring a provider while your own retries reshape its load |
 | [aliasing-experiments](notes/aliasing-experiments.md) | same model, two names, different behavior — how to test without accusing |
 | [sanitization-boundary](notes/sanitization-boundary.md) | what survives aggregation, decided before collection starts |
+| [probe-set-design](notes/probe-set-design.md) | the mid-series probe swap that looks like a provider regression |
 
 ## Harness design (the artifact)
 
