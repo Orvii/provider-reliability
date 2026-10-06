@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you cite this research set, please use this metadata."
+type: dataset
+title: "provider-reliability — measuring LLM inference provider reliability from the wire"
+authors:
+  - name: "Orvii"
+    alias: "Orvii collective"
+identifiers:
+  - type: url
+    value: "https://github.com/Orvii/provider-reliability"
+repository-code: "https://github.com/Orvii/provider-reliability"
+version: "1.1.0"
+date-released: "2026-10-06"
+notes: "Error taxonomy, stream stalls, retry storms, aliasing experiments and probe-set design for wire-level provider measurement."
