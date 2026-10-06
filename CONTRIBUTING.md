@@ -13,7 +13,7 @@ This repo publishes **method**, not measurements of named providers. That line i
 
 - Raw traffic, prompts, completions, headers, or anything account-identifying — see [sanitization-boundary](notes/sanitization-boundary.md). PRs containing them will be closed without review.
 - Named-provider rankings or leaderboards. Datasets and methods publish; rankings rot into slander (see harness-design "What we deliberately do not build").
-- Measurements without the environment block and probe-set version ([the-environment-block](notes/the-environment-block-is-part-of-the-result.md), [probe-set-design](notes/probe-set-design.md)).
+- Measurements without the environment block and probe-set version ([the environment block is part of the result](https://github.com/Orvii/equivalence-notes/blob/main/notes/environment-is-part-of-the-program.md), [probe-set-design](notes/probe-set-design.md)).
 
 ## If you measured something real
 

@@ -19,4 +19,4 @@ These files have **never contacted a provider** and are published unverified on 
 1. Keys via env (`apiKeyEnv`), never in config files that get committed.
 2. Respect provider terms: fixed small concurrency, no probe volumes resembling load tests (see [aliasing-experiments](../notes/aliasing-experiments.md), ethics paragraph).
 3. Publish the event log with the [sanitization boundary](../notes/sanitization-boundary.md) enforced at write time — the sink appends rows as the adapter emits them, so filter in the adapter, not after.
-4. Report arms separately. A single blended success rate re-commits the sin [retry-storms](../notes/retry-storms.md) exists to prevent.
+4. Report arms separately. A single blended success rate re-commits the sin that [retry-storms](../notes/retry-storms.md) exists to prevent.
